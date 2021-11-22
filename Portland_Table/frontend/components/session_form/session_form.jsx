@@ -12,6 +12,10 @@ class SessionForm extends React.Component {
     this.loginDemoUser = this.loginDemoUser.bind(this);
   }
 
+  componentDidMount() {
+    this.props.removeSessionErrors();
+  }
+
   update(field) {
     return e => (
       this.setState({[field]: e.currentTarget.value})

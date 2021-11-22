@@ -14,6 +14,7 @@ const Greeting = (props) => {
   const sessionLinks = () => ( 
     <div>
       <Link to="/signup">Sign Up</Link>
+      <br />
       <Link to="/login">Login</Link>
     </div>
   )
