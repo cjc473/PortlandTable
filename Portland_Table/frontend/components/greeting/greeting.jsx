@@ -7,7 +7,7 @@ const Greeting = (props) => {
   const personalGreeting = () => ( 
     <div>
       <h3>Welcome back {`${currentUser.username}`}!</h3>
-      <button onClick={() => logout()}>Logout</button>
+      <button onClick={logout}>Logout</button>
     </div>
   )
 

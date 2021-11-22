@@ -5,6 +5,7 @@ class SessionForm extends React.Component {
     super(props);
     this.state = {
       username: '',
+      email: '',
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -35,36 +36,82 @@ class SessionForm extends React.Component {
   }
 
   render() {
-    return (
-      <div className="login-form-container">
-        <form onSubmit={this.handleSubmit} className="login-form-box">
-          Welcome to PortlandTable!
-          <br />
-          Please {this.props.formType} or {this.props.navLink}
-          {this.renderErrors()}
-          <div className="login-form">
+
+    const loginForm = () => {
+      return(
+        <div className="login-form-container">
+          <form onSubmit={this.handleSubmit} className="login-form-box">
+            Welcome to PortlandTable!
             <br />
-            <label>Username:
-              <input type="text"
-                value={this.state.username}
-                onChange={this.update('username')}
-                className="login-input"
-              />
-            </label>
+            Please {this.props.formType} or {this.props.navLink}
+            {this.renderErrors()}
+            <div className="login-form">
+              <br />
+              <label>Username:
+                <input type="text"
+                  value={this.state.username}
+                  onChange={this.update('username')}
+                  className="login-input"
+                />
+              </label>
+              <br />
+              <label>Password:
+                <input type="password"
+                  value={this.state.password}
+                  onChange={this.update('password')}
+                  className="login-input"
+                />
+              </label>
+              <br />
+              <input className="session-submit" type="submit" value={this.props.formType} />
+            </div>
+          </form>
+        </div>
+      )
+    }
+
+    const signupForm = () => {
+      return (
+        <div className="login-form-container">
+          <form onSubmit={this.handleSubmit} className="login-form-box">
+            Welcome to PortlandTable!
             <br />
-            <label>Password:
-              <input type="password"
-                value={this.state.password}
-                onChange={this.update('password')}
-                className="login-input"
-              />
-            </label>
-            <br />
-            <input className="session-submit" type="submit" value={this.props.formType} />
-          </div>
-        </form>
-      </div>
-    );
+            Please {this.props.formType} or {this.props.navLink}
+            {this.renderErrors()}
+            <div className="login-form">
+              <br />
+              <label>Username:
+                <input type="text"
+                  value={this.state.username}
+                  onChange={this.update('username')}
+                  className="login-input"
+                />
+              </label>
+              <br />
+              <label>Email:
+                <input type="text"
+                  value={this.state.email}
+                  onChange={this.update('email')}
+                  className="login-input"
+                />
+              </label>
+              <br />
+              <label>Password:
+                <input type="password"
+                  value={this.state.password}
+                  onChange={this.update('password')}
+                  className="login-input"
+                />
+              </label>
+              <br />
+              <input className="session-submit" type="submit" value={this.props.formType} />
+            </div>
+          </form>
+        </div>
+      )
+    }
+
+    return (this.props.formType === 'login') ? loginForm() : signupForm();
   }
 }
 
