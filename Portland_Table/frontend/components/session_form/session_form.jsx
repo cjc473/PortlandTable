@@ -112,6 +112,7 @@ class SessionForm extends React.Component {
     }
 
     return (this.props.formType === 'login') ? loginForm() : signupForm();
+
   }
 }
 
