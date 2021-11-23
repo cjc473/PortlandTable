@@ -349,7 +349,7 @@ MigrationBackup/
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
 
-
+tmp
 node_modules/
 bundle.js
 bundle.js.map
