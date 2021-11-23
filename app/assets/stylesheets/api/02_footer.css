@@ -8,4 +8,9 @@
   left:0;
   bottom:0;
   right:0;
+  height: 70px;
+}
+
+.favicon {
+  margin: 10px 10px 10px 15px;
 }

@@ -5,14 +5,14 @@ const Footer = () => {
   return (
     <footer>
       <div className='footerContainer'>
-        <div className='favicons'>
-          <SocialIcon url="https://www.linkedin.com" bgColor="#414141" />
+        <div className='favicon'>
+          <SocialIcon url="https://www.linkedin.com" bgColor="#D8D9DB" />
         </div>
-        <div className='favicons'>
-          <SocialIcon url="https://github.com/cjc473" bgColor="#414141" />
+        <div className='favicon'>
+          <SocialIcon url="https://github.com/cjc473" bgColor="#D8D9DB" />
         </div>
-        <div className='favicons'>
-          <SocialIcon url="https://angel.co/" bgColor="#414141" />
+        <div className='favicon'>
+          <SocialIcon url="https://angel.co/" bgColor="#D8D9DB" />
         </div>
       </div>
     </footer>
