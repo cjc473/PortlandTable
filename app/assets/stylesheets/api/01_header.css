@@ -1,0 +1,7 @@
+.sessionButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 54px;
+  width: 169px;
+}

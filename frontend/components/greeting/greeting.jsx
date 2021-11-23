@@ -12,7 +12,7 @@ const Greeting = (props) => {
   )
 
   const sessionLinks = () => ( 
-    <div>
+    <div className="sessionButtons">
       <Link to="/signup">Sign Up</Link>
       <br />
       <Link to="/login">Login</Link>
