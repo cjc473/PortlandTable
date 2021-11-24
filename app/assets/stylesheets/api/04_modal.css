@@ -24,7 +24,7 @@
   transform: translate(-50%, -50%);
 }
 
-.modal-inside h1 {
+.modal-inside h2 {
   display: flex;
   justify-content: left;
   font-size: 28px;
@@ -33,4 +33,25 @@
   width: 560px;
   /* border-bottom: red; */
   border-bottom: 1px solid #d8d9db;
+}
+
+.login-form input {
+  width: 530px;
+  padding: 15px 15px 15px 15px;
+  margin-top: 10px;
+  border: 1px solid #d8d9db;
+}
+
+.session-submit {
+  display: flex;
+  flex-direction: center;
+  font-size: 16px;
+  background-color: rgb(218, 55, 67);
+  border: 1px solid rgb(184, 34, 45);
+  color: #FFF
+}
+
+.session-submit:hover {
+  background-color: rgb(142, 37, 44);
+  border: 1px solid rgb(122, 35, 39)
 }

@@ -55,29 +55,30 @@ class SessionForm extends React.Component {
       return(
         <div className="login-form-container">
           <form onSubmit={this.handleSubmit} className="login-form-box">
+            <h2>Please sign in</h2>
             <br />
             {this.renderErrors()}
             <div className="login-form">
               <br />
-              <label>Username:
+
                 <input type="text"
                   value={this.state.username}
                   onChange={this.update('username')}
                   className="login-input"
                   placeholder="Username"
                 />
-              </label>
+
               <br />
-              <label>Password:
+    
                 <input type="password"
                   value={this.state.password}
                   onChange={this.update('password')}
                   className="login-input"
                   placeholder="Password"
                 />
-              </label>
+
               <br />
-              <input className="session-submit" type="submit" value={this.props.formType} />
+              <input className="session-submit" type="submit" value="Create Account" />
             </div>
           </form>
 
@@ -95,38 +96,38 @@ class SessionForm extends React.Component {
       return (
         <div className="login-form-container">
           <form onSubmit={this.handleSubmit} className="login-form-box">
-            <h1>Welcome to PortlandTable!</h1>
+            <h2>Welcome to PortlandTable!</h2>
             {this.renderErrors()}
             <div className="login-form">
               <br />
-              <label>Username:
+
                 <input type="text"
                   value={this.state.username}
                   onChange={this.update('username')}
                   className="login-input"
                   placeholder="Username *"
                 />
-              </label>
+
               <br />
-              <label>Email:
+
                 <input type="text"
                   value={this.state.email}
                   onChange={this.update('email')}
                   className="login-input"
                   placeholder="Enter email *"
                 />
-              </label>
+
               <br />
-              <label>Password:
+
                 <input type="password"
                   value={this.state.password}
                   onChange={this.update('password')}
                   className="login-input"
                   placeholder="Enter password *"
                 />
-              </label>
+
               <br />
-              <input className="session-submit" type="submit" value={this.props.formType} />
+              <input className="session-submit" type="submit" value="Sign In" />
             </div>
           </form>
         </div>
