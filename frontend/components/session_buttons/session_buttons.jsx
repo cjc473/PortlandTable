@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 const SessionButtons = (props) => {
   const { currentUser, logout } = props
@@ -7,18 +6,20 @@ const SessionButtons = (props) => {
   const displayLogout = () => ( 
     <div>
       <button onClick={logout}>Logout</button>
+      <button>test</button>
     </div>
   )
 
   const displaySessionLinks = () => ( 
     <div className="sessionButtons">
-      <Link to="/signup">Sign Up</Link>
-      <br />
-      <Link to="/login">Login</Link>
+      <button onClick={() => openModal('login')}>Login</button>
+      <button onClick={() => openModal('signup')}>Signup</button>
+      <button>test</button>
     </div>
   )
 
   return currentUser ? displayLogout() : displaySessionLinks();
+
 }
 
 export default SessionButtons;

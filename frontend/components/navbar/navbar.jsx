@@ -2,7 +2,7 @@ import React from "react";
 import SessionButtonsContainer from "../session_buttons/session_buttons_container";
 import Logo from "./logo";
 
-const Navbar = () => {
+const Navbar = (props) => {
   return (
     <div className="navbar-container">
       <Logo />

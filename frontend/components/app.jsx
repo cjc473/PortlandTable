@@ -5,11 +5,12 @@ import NavbarContainer from "./navbar/navbar_container";
 import LoginFormContainer from "./session_form/login_form_container";
 import SignupFormContainer from "./session_form/signup_form_container";
 import Footer from "./footer";
+import ModalContainer from "./modal/modal_container";
 
 
 const App = () => (
   <div className="main">
-    <Modal />
+    <ModalContainer />
     <NavbarContainer />
     <Switch>
       <AuthRoute exact path="/login" component={LoginFormContainer} />
