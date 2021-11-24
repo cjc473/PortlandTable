@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  position: absolute;
 }
 
 .logo {
@@ -12,6 +11,8 @@
   font-size: 24px;
   padding-top: 10px;
   padding-left: 10px;
+  font-weight: 600;
+  margin-top: 5px;
 }
 
 .logo img {
@@ -19,7 +20,7 @@
   height: 43px;
   padding-left: 10px;
   padding-right: 10px;
-  font-weight: 600;
+
 }
 
 .sessionButtons {
@@ -28,6 +29,7 @@
   white-space: nowrap;
   justify-content: center;
   align-items: center;
+  margin-top: 15px;
 }
 
 .sessionButtons button {
@@ -51,7 +53,15 @@
   margin-right: 15px;
 }
 
+#signup-button:hover {
+  background-color: #1f6880;
+}
+
 #login-button {
   border: 0.0625rem solid #d8d9db;
   color: black;
+}
+
+#login-button:hover {
+  background-color: #d8d9db;
 }
