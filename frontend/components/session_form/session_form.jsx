@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -26,12 +27,14 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.processForm(user);
+    this.props.closeModal();
   }
 
   loginDemoUser(e) {
     e.preventDefault();
     const demoUser = { username: "demouser", password: "demo1234" }
     this.props.processForm(demoUser);
+    this.props.closeModal();
   }
 
   renderErrors() {
@@ -52,9 +55,7 @@ class SessionForm extends React.Component {
       return(
         <div className="login-form-container">
           <form onSubmit={this.handleSubmit} className="login-form-box">
-            Welcome to PortlandTable!
             <br />
-            Please {this.props.formType} or {this.props.navLink}
             {this.renderErrors()}
             <div className="login-form">
               <br />
