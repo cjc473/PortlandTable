@@ -11,6 +11,7 @@ class SessionForm extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.loginDemoUser = this.loginDemoUser.bind(this);
+    // this.props.closeModal = this.props.closeModal.bind(this)
   }
 
   componentDidMount() {
@@ -56,7 +57,6 @@ class SessionForm extends React.Component {
         <div className="login-form-container">
           <form onSubmit={this.handleSubmit} className="login-form-box">
             <h2>Please sign in</h2>
-            <br />
             {this.renderErrors()}
             <div className="login-form">
               <br />
@@ -78,9 +78,14 @@ class SessionForm extends React.Component {
                 />
 
               <br />
-              <input className="session-submit" type="submit" value="Create Account" />
+              <br />
+              <input className="session-submit" type="submit" value="Sign In" />
             </div>
           </form>
+
+          <br />
+            <p> - or - </p>
+          <br />
 
           <form onSubmit={this.loginDemoUser} className="login-form-box">
             {this.renderErrors()}
@@ -127,7 +132,8 @@ class SessionForm extends React.Component {
                 />
 
               <br />
-              <input className="session-submit" type="submit" value="Sign In" />
+              <br />
+              <input className="session-submit" type="submit" value="Create Account" />
             </div>
           </form>
         </div>
