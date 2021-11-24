@@ -13,6 +13,7 @@ const Modal = ({ modal, closeModal }) => {
       break;
     case "signup":
       modalForm = <SignupFormContainer />
+      break;
     default:
       return null;
   }
