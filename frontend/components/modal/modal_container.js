@@ -3,7 +3,7 @@ import { closeModal } from "../../actions/modal_actions";
 
 const mSTP = state => {
   return {
-    modal: state.ui.modal.modal
+    modal: state.ui.modal
   };
 };
 

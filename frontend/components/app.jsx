@@ -9,6 +9,7 @@ import Footer from "./footer";
 
 const App = () => (
   <div className="main">
+    <Modal />
     <NavbarContainer />
     <Switch>
       <AuthRoute exact path="/login" component={LoginFormContainer} />
