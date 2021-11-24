@@ -6,7 +6,7 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
+
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,8 +14,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
   <link rel="icon" href="<%= image_url('logo.png')%>" type="image/x-icon" />
   <script type="text/javascript">
-    window.logoURL="<%= image_url('logo.png') %>"
+    window.logoURL = "<%= image_url('logo.png') %>";
   </script>
+  <%= javascript_include_tag 'application' %>
   </head>
 
   <body>
