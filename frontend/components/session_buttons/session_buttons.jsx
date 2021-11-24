@@ -1,25 +1,21 @@
 import React from "react";
 
-const SessionButtons = (props) => {
-  const { currentUser, logout } = props
+const SessionButtons = ({ currentUser, logout, openModal }) => {
 
   const displayLogout = () => ( 
     <div>
       <button onClick={logout}>Logout</button>
-      <button>test</button>
     </div>
   )
 
   const displaySessionLinks = () => ( 
     <div className="sessionButtons">
-      <button onClick={() => openModal('login')}>Login</button>
-      <button onClick={() => openModal('signup')}>Signup</button>
-      <button>test</button>
+      <button onClick={() => openModal('login')}>Sign in</button>
+      <button onClick={() => openModal('signup')}>Sign up</button>
     </div>
   )
 
   return currentUser ? displayLogout() : displaySessionLinks();
-
 }
 
 export default SessionButtons;
