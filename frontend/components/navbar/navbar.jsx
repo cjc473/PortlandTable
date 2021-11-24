@@ -7,7 +7,10 @@ const Navbar = ({ currentUser, logout, openModal }) => {
     <div className="navbar-container">
       <Logo />
       {currentUser ? (
-        <button onClick={logout}>Logout</button>
+        <div id="logout-button-container" className="sessionButtons">
+          <div id="logout-spacer"></div>
+          <button id="logout-button" onClick={logout}>Logout</button>
+        </div>
       ) : (
         <div className="sessionButtons">
           <button id="signup-button" onClick={() => openModal('signup')}>Sign up</button>

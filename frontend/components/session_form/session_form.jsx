@@ -12,6 +12,7 @@ class SessionForm extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.loginDemoUser = this.loginDemoUser.bind(this);
+    this.closeModal = this.props.closeModal.bind(this);
     // this.props.closeModal = this.props.closeModal.bind(this)
   }
 
@@ -29,14 +30,14 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.processForm(user);
-    this.props.closeModal();
+    this.closeModal();
   }
 
   loginDemoUser(e) {
     e.preventDefault();
     const demoUser = { email: "demo@gmail.com", password: "demo1234" }
     this.props.processForm(demoUser);
-    this.props.closeModal();
+    this.closeModal();
   }
 
   renderErrors() {
