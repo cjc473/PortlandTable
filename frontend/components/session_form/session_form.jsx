@@ -5,7 +5,8 @@ class SessionForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: '',
+      first_name: '',
+      last_name: '',
       email: '',
       password: ''
     };
@@ -33,7 +34,7 @@ class SessionForm extends React.Component {
 
   loginDemoUser(e) {
     e.preventDefault();
-    const demoUser = { username: "demouser", password: "demo1234" }
+    const demoUser = { email: "demo@gmail.com", password: "demo1234" }
     this.props.processForm(demoUser);
     this.props.closeModal();
   }
@@ -62,10 +63,10 @@ class SessionForm extends React.Component {
               <br />
 
                 <input type="text"
-                  value={this.state.username}
-                  onChange={this.update('username')}
+                  value={this.state.email}
+                  onChange={this.update('email')}
                   className="login-input"
-                  placeholder="Username"
+                  placeholder="Email"
                 />
 
               <br />
@@ -107,11 +108,20 @@ class SessionForm extends React.Component {
               <br />
 
                 <input type="text"
-                  value={this.state.username}
-                  onChange={this.update('username')}
+                  value={this.state.first_name}
+                  onChange={this.update('first_name')}
                   className="login-input"
-                  placeholder="Username *"
+                  placeholder="First Name *"
                 />
+
+              <br />
+
+              <input type="text"
+                value={this.state.last_name}
+                onChange={this.update('last_name')}
+                className="login-input"
+                placeholder="Last Name *"
+              />
 
               <br />
 
