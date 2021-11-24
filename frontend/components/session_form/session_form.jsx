@@ -64,6 +64,7 @@ class SessionForm extends React.Component {
                   value={this.state.username}
                   onChange={this.update('username')}
                   className="login-input"
+                  placeholder="Username"
                 />
               </label>
               <br />
@@ -72,6 +73,7 @@ class SessionForm extends React.Component {
                   value={this.state.password}
                   onChange={this.update('password')}
                   className="login-input"
+                  placeholder="Password"
                 />
               </label>
               <br />
@@ -93,7 +95,7 @@ class SessionForm extends React.Component {
       return (
         <div className="login-form-container">
           <form onSubmit={this.handleSubmit} className="login-form-box">
-            Welcome to PortlandTable!
+            <h1>Welcome to PortlandTable!</h1>
             <br />
             Please {this.props.formType} or {this.props.navLink}
             {this.renderErrors()}
@@ -104,6 +106,7 @@ class SessionForm extends React.Component {
                   value={this.state.username}
                   onChange={this.update('username')}
                   className="login-input"
+                  placeholder="Username *"
                 />
               </label>
               <br />
@@ -112,6 +115,7 @@ class SessionForm extends React.Component {
                   value={this.state.email}
                   onChange={this.update('email')}
                   className="login-input"
+                  placeholder="Enter email *"
                 />
               </label>
               <br />
@@ -120,6 +124,7 @@ class SessionForm extends React.Component {
                   value={this.state.password}
                   onChange={this.update('password')}
                   className="login-input"
+                  placeholder="Enter password *"
                 />
               </label>
               <br />

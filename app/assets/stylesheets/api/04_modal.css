@@ -14,5 +14,12 @@
   background: #FFF;
   top: 50%;
   left: 50%;
+  width: 500px;
+  border-radius: 5px;
+  padding-left: 30px;
+  padding-top: 10px;
+  padding-bottom: 30px;
   transform: translate(-50%, -50%);
+  font-size: 28px;
+  font-weight: 500;
 }
