@@ -7,7 +7,7 @@ const Modal = ({ modal, closeModal }) => {
   if (!modal) return null;
   let modalForm;
 
-  switch(modal[0]) {
+  switch(modal) {
     case "login":
       modalForm = <LoginFormContainer />
       break;

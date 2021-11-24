@@ -1,15 +1,27 @@
 import React from "react";
-import SessionButtons from "../session_buttons/session_buttons";
-// import SessionButtonsContainer from "../session_buttons/session_buttons_container";
 import Logo from "./logo";
 
-const Navbar = (props) => {
+const Navbar = ({ currentUser, logout, openModal }) => {
+
   return (
     <div className="navbar-container">
       <Logo />
-      <SessionButtons />
+      {currentUser ? (
+        <button onClick={logout}>Logout</button>
+      ) : (
+        <div className="sessionButtons">
+          <button onClick={() => openModal('login')}>Sign in</button>
+          <button onClick={() => openModal('signup')}>Sign up</button>
+        </div>
+      )}
     </div>
   )
+    
 }
 
-export default Navbar
+export default Navbar;
+
+
+
+
+
